@@ -1,0 +1,38 @@
+## Vector 문법
+
+vector<pair<int, int>> a;
+vector<int> b;
+vector<int> v(5);
+vector<int> v(5, 2);
+vector<int> v2(v1);
+v.assign(5, 2);- 2의 값으로 5개의 원소 할당.
+
+v.at(idx);- idx번째 원소를 참조합니다. - v[idx] 보다 속도는 느리지만, 범위를 점검하므로 안전합니다.
+
+v[idx];- idx 번째 원소를 참조합니다.- 범위를 점검하지 않으므로 속도가 v.at(idx)보다 빠릅니다.
+
+v.front();- 첫번째 원소를 참조합니다.v.back();- 마지막 원소를 참조합니다.
+
+v.clear();- 모든 원소를 제거합니다.- 원소만 제거하고 메모리는 남아있습니다.- size만 줄어들고 capacity는 그대로 남아있습니다.
+
+v.push_back(7);- 마지막 원소 뒤에 원소 7을 삽입합니다.
+
+v.pop_back();- 마지막 원소를 제거합니다.
+
+v.begin();- 첫번째 원소를 가리킵니다.
+
+(iterator와 사용)v.end();- 마지막의 "다음"을 가리킵니다 (iterator와 사용)
+
+v.rbegin();- reverse begin을 가리킨다 (거꾸로 해서 첫번째 원소를 가리킵니다)- iterator와 사용.
+
+v.rend();- reverse end 을 가리킨다 (거꾸로 해서 마지막의 다음을 가리킵니다)- iterator와 사용.
+
+v.reserve(n);- n개의 원소를 저장할 위치를 예약합니다(미리 동적할당 해놉니다)
+
+v.resize(n);- 크기를 n으로 변경한다.- 더 커졌을 경우 default값인 0으로 초기화 한다.
+
+v.resize(n,3);- 크기를 n으로 변경한다.- 더 커졌을 경우 인자의 값을 3으로 초기화한다.
+
+a.push_back(make_pair(-2,-1));
+1의 아스키 코드는 49
+a의 아스키 코드는 97
