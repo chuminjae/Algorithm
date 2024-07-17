@@ -1,0 +1,2 @@
+스택은 FILA  First in last out --> 택배 같은 구조 쌓아가는 구조
+큐는 FIFO First in first out --> 택배와 반대 구조
