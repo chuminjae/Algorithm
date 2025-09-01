@@ -15,8 +15,11 @@ public:
             int mid2 = -1;
             int total_length = len1 + len2;
             while(start <= end){
+                // element in front of mid1 is considered the smaller part of nums1.
+                // element including and behind mid1 is considered the bigger part of nums2.
                 mid1 = start + (end - start) / 2;
-                mid2 = (total_length + 1) / 2 - mid1;
+                // mid2 is decided by mid1.
+                mid2 = total_length / 2 - mid1;
                 int left_max1 = (mid1 == 0) ? INT_MIN : nums1[mid1 - 1];
                 int left_max2 = (mid2 == 0) ? INT_MIN : nums2[mid2 - 1];
                 int right_min1 = (mid1 == nums1.size()) ? INT_MAX : nums1[mid1];
@@ -25,7 +28,7 @@ public:
                     if((len1 + len2) % 2 == 0){
                         return ((double)max(left_max1, left_max2) + min(right_min1, right_min2)) / 2;
                     }else{
-                        return (double)(max(left_max1, left_max2));
+                        return (double)(min(right_min1, right_min2));
                     }
                 }
                 else if(left_max1 > right_min2){
@@ -37,5 +40,6 @@ public:
             }
         }
         return -1;
+        // time complexixty log(min(m,n))
     }
 };
