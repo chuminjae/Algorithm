@@ -1,5 +1,6 @@
 class Solution {
 public:
+// consider the 2D array as a 1D array.
     bool searchMatrix(vector<vector<int>>& matrix, int target) {
         int start = 0;
         int end = matrix.size() * matrix[0].size() - 1;
