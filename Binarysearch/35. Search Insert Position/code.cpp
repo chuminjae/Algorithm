@@ -33,5 +33,7 @@ public:
         // Start index only moves when nums[mid] is smaller than the target. Safe to assume that if index < start nums[index] < nums[mid].
         // Therefore, return start.
         return start;
+        // Used binary search, T(n) = T(n/2) + O(1).
+        // O(log(n)).
     }
 };
