@@ -48,5 +48,6 @@ public:
             a.push_back(-1);
         }
         return a;
+        // time complexity: log(n)
     }
 };
