@@ -4,6 +4,8 @@ public:
         int start = 0;
         int end = nums.size() - 1;
         int mid = -1;
+        // Even if it is rotated, if the left part is not sorted, the right part is sorted.
+        // If the right part is sorted, the left part is sorted.
         while(start <= end){
             mid = start + (end - start) / 2;
             if(nums[mid] == target){
@@ -11,6 +13,7 @@ public:
             }
             // left part is sorted
             else if(nums[mid] > nums[start]){
+                // check if target is in the left part.
                 if(nums[mid] > target && nums[start] <= target){
                     end = mid - 1;
                 }
@@ -20,6 +23,7 @@ public:
             }
             // right part is sorted
             else{
+                // check if target is in the right part.
                 if(nums[end] >= target && nums[mid] < target){
                     start = mid + 1;
                 }
@@ -29,5 +33,6 @@ public:
             }
         }
         return -1;
+        // time complexity: log(n)
     }
 };
