@@ -17,6 +17,9 @@ public:
                 start = mid + 1;
             }
         }
+        // If true, push start.
+        // start is the index where the condition holds:
+        // If true, idx < start, nums[idx] < target
         if (check) {
             a.push_back(start);
         } else {
@@ -36,6 +39,9 @@ public:
                 end = mid - 1;
             }
         }
+        // If true, push end.
+        // end is the index where the condition holds:
+        // If true, idx > end, nums[idx] > target
         if (check) {
             a.push_back(end);
         } else {
