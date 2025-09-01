@@ -21,4 +21,5 @@ public:
         // In this case return end since end guarantees that index > end, nums[end] < nums[mid]
         return end;
     }
+// time compelexity: log(n)
 };
